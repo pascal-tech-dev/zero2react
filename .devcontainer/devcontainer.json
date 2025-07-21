@@ -1,0 +1,41 @@
+{
+  "name": "Zero2React Workspace",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+  // Mount your workspace into the same path as Dockerfile's WORKDIR
+  "workspaceFolder": "/workspace/${localWorkspaceFolderBasename}",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace/${localWorkspaceFolderBasename},type=bind,consistency=cached",
+  "customizations": {
+    "settings": {
+      "terminal.integrated.shell.linux": "/bin/bash",
+      // Automatically format code on save
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true,
+      // Enable ESLint
+      "eslint.enable": true,
+      "eslint.experimental.useFlatConfig": true,
+      "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+      ],
+    "eslint.packageManager": "npm",
+    "eslint.workingDirectories": [
+      { "mode": "auto" }
+    ]
+    },
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "eamodio.gitlens",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  },
+  "postCreateCommand": "npm install",
+  "remoteUser": "node"
+}

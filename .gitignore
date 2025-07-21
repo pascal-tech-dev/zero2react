@@ -1,0 +1,51 @@
+# Node dependencies
+/node_modules
+**/node_modules
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Environment variables
+.env
+.env.*.local
+!.env.example
+
+# Build output
+# Create React App
+/react/core/cra/build/
+/react/core/cra/node_modules/
+/react/core/vite/dist/
+/react/core/vite/node_modules/
+/basics/html-css/node_modules/
+/basics/js/node_modules/
+/projects/todo/node_modules/
+/projects/blog/node_modules/
+/projects/shop-cart/node_modules/
+
+/dist
+/build
+
+# Coverage directory used by testing tools
+coverage/
+**/coverage/
+
+# IDE & OS files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+.DS_Store
+Thumbs.db
+
+# Miscellaneous caches
+.cache
+.eslintcache
+.pnp.*
+.yarn/cache/
+.yarn/unplugged/
