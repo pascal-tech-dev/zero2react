@@ -45,7 +45,7 @@ This repository is a npm Workspaces monorepo that houses multiple packages and
 ## Notes
 
 - The `basics/` directory contains foundational packages for HTML, CSS, and JavaScript.
-- The `react/core/cra/` directory contains a Create React App setup. \\
+- The `react/core/cra/` directory contains a Create React App setup. \
   To create a new React app with Create React App, you can run:
   ```bash
   npx create-react-app my-app
