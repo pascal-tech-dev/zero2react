@@ -13,6 +13,10 @@
       // Automatically format code on save
       "editor.defaultFormatter": "esbenp.prettier-vscode",
       "editor.formatOnSave": true,
+      "editor.codeActionsOnSave": {
+        "source.fixAll.prettier": true,
+        "source.fixAll.eslint": true
+      },
       // Enable ESLint
       "eslint.enable": true,
       "eslint.experimental.useFlatConfig": true,
