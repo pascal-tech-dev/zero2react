@@ -1,0 +1,80 @@
+.paragraph-overflow {
+  width: 100px;
+  height: 50px;
+  padding: 20px;
+  border: 1px solid;
+}
+
+.awesome {
+  text-transform: uppercase;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1;
+  border: 5px solid;
+  padding: 2rem;
+
+  /* The important extrinsic width */
+  width: 320px;
+}
+
+.awesome[data-sizing='intrinsic'] {
+  width: min-content;
+}
+
+/*
+  
+  
+  Presentational styles 
+  */
+.awesome {
+  --flow-space: 2rem;
+}
+
+.box-model {
+  border: 1px solid var(--color-stroke);
+  width: 100%;
+  max-width: 640px;
+  transition: max-width 300ms cubic-bezier(0, 0.26, 0.13, 1.55) 200ms;
+}
+
+.box-model[data-size='border-box'] {
+  max-width: 600px;
+}
+
+.box-model > * {
+  transform-origin: center;
+  transition: fill 200ms ease;
+}
+
+.box-model__margin-box {
+  fill: var(--color-off-white);
+  stroke: var(--color-primary);
+}
+
+.box-model__text,
+.box-model__change-text {
+  fill: var(--color-dark);
+}
+
+.box-model__border-box {
+  fill: var(--color-primary);
+}
+
+.box-model__padding-box {
+  fill: var(--color-primary-x-light);
+}
+
+.box-model__content-box {
+  fill: var(--color-light);
+  stroke: var(--color-primary);
+}
+
+.box-model[data-size='border-box']
+  :is(.box-model__content-box, .box-model__padding-box) {
+  fill: var(--color-primary);
+  stroke: var(--color-primary-x-light);
+}
+
+.box-model[data-size='border-box'] .box-model__change-text {
+  fill: var(--color-light);
+}
